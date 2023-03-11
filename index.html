@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Data Store</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+           
+        }
+        .wrapper{
+            width: 50%;
+            margin: 0 auto;
+            background-color: black;
+            padding: 100px;
+            border-radius: 10px;
+        }
+        .wrapper div{
+            width: 100%;
+            margin: 10px;
+        }
+        input{
+            width: 50%;
+            padding: 10px 3px;
+        }
+        input:focus{
+            outline: none;
+        }
+        button{
+            padding: 10px;
+            background-color: brown;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <div>
+                <input type="text" placeholder="Enter Name" id="name">
+                <button onclick="deleteName()">Detele Name</button>
+                <button onclick="sendName()">Send Name</button>
+            </div>
+            <div>
+                <input type="email" placeholder="Enter Email" id="email">
+                <button onclick="deleteEmail()">Detele Email</button>
+                <button onclick="sendMail()">Send Email</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Message" id="message">
+                <button onclick="deleteMessage()">Detele Message</button>
+                <button onclick="sendMessage()">Send Message</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
