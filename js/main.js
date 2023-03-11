@@ -1,16 +1,32 @@
+let name=document.getElementById("name");
+let message=document.getElementById("message");
+let email=document.getElementById("email");
+
 const sendName=()=>{
- const name=document.getElementById("name").value;
- localStorage.setItem("name",name)
+    const value=name.value;
+ localStorage.setItem("name",value)
 }
 const sendMail=()=>{
-    const email=document.getElementById("email").value;
-    localStorage.setItem("email",email)
+    const value=email.value;
+    localStorage.setItem("email",value)
    }
 
    const sendMessage=()=>{
-    const message=document.getElementById("message").value;
-    localStorage.setItem("Message",message)
+    const value=message.value;
+    localStorage.setItem("Message",value)
    }
+
+
+const AllDataAdd=()=>{
+    const dataObj={};
+    dataObj['name']=name.value;
+    dataObj['email']=email.value;
+    dataObj['message']=message.value;
+    const convertJson=JSON.stringify(dataObj);
+    localStorage.setItem("information",convertJson)
+    
+}
+
 
 //    delete process 
 
